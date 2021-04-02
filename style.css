@@ -1,0 +1,45 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: #000;
+}
+
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.book{
+  width: 150px;
+  height: 300px;
+  padding: 30px;
+  border-left: 30px solid #BA2124;
+  transform: rotate(-45deg) skewX(1deg) scale(.8);
+  background: #6E2729;
+  background-size: contain;
+  box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
+}
+
+.book::before{
+  content: '';
+  position: absolute;
+  width: 30px;
+  top: 0;
+  left: 0;
+  background: #ff070b;
+  height: 100%;
+  transform: skewY(-45deg) translate(-57px, -43px)
+}
+
+.book::after{
+  content: '';
+  position: absolute;
+  width: 113%;
+  height: 30px;
+  background: repeating-linear-gradient(to bottom, black 1px, white 2px, white 4px);
+  bottom: 0;
+  left: 0;
+  transform: skewX(-45deg) translate(-11px, 30px)
+}
